@@ -22,14 +22,6 @@ resource "aws_subnet" "devopsshack_subnet" {
   }
 }
 
-resource "aws_internet_gateway" "devopsshack_igw" {
-  vpc_id = aws_vpc.devopsshack_vpc.id
-
-  tags = {
-    Name = "devopsshack-igw"
-  }
-}
-
 resource "aws_route_table" "devopsshack_route_table" {
   vpc_id = aws_vpc.devopsshack_vpc.id
 
